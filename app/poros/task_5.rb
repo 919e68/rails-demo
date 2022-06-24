@@ -1,5 +1,10 @@
 class Task5 < ActiveRecord::Base
-  has_many :notes, as: :noteable, dependent: :destroy
+  include NoteChecker
+end
+
+# this module should be on app/models/concerns folder
+module NoteChecker
+  include ActiveSupport::Concern
 
   def has_simple_notes?
     notes.not_reminders_or_todos.any?

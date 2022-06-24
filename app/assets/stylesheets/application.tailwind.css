@@ -2,13 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f6f9;
+}
+
 h1 {
   @apply font-bold text-xl;
 }
 
 a {
   @apply underline;
+  padding: 6px 12px;
 }
+
 .btn {
   @apply border rounded px-2 py-1 my-4;
 }
+
+.button {
+  flex: 1;
+  background-color: #007FFF;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+.activity-form,
+.activity-item  {
+  background-color: #fff;
+  width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid #e5e8ec;
+  border-radius: 3px;
+}
+
+.activity-form .field {
+  margin-bottom: 15px;
+}
+
+.activity-form .field input {
+  width: 100%;
+  padding: 5px;
+}
+
+.step-progress {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+.step,
+.step input {
+  display: none;
+}
+
+.step.active,
+.step.active input {
+  display: block;
+}
+
+.step-actions {
+  display: flex;
+}
+
+.step-actions > .step-action {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+}
+
+.activity-item-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.new-activity-button {
+  flex-basis: 600px;
+  flex-grow: 0;
+}
+
+.notice {
+  display: flex;
+  justify-content: center;
+}
+

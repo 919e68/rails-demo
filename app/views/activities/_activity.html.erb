@@ -1,4 +1,4 @@
-<div id="<%= dom_id activity %>">
+<div class="activity-item" id="<%= dom_id activity %>">
   <p>
     <strong>Name:</strong>
     <%= activity.name %>
@@ -19,4 +19,8 @@
     <%= activity.ends_at %>
   </p>
 
+  <div class="activity-item-action">
+    <%= link_to "Show this activity", activity %>
+    <%= button_to "Destroy this activity", activity, method: :delete, class: 'button' %>
+  </div>
 </div>

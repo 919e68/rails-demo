@@ -30,7 +30,7 @@ Select all statements that are correct after the following migration has been ex
 ```
 class ContactsMigration < ActiveRecord::Migration
   def change
-    create table :contacts do |t|
+    create_table :contacts do |t|
       t.string :name
       t.integer :telephone_number
       t.text :address, null: false
@@ -41,10 +41,10 @@ end
 ```
 
 Select all acceptable answers:
-- [ ] The contacts.name field may be null.
-- [ ] The contacts table has no index.
-- [ ] The table called contacts contains four different data types.
-- [ ] The table called contacts contains four different fields.
+- [x] The contacts.name field may be null.
+- [x] The contacts table has no index.
+- [x] The table called contacts contains four different data types.
+- [ ] The table called contacts contains four different fields. (it has 6 including the id, created_at, updated_at)
 - [ ] The contacts.address field may be null.
 
 
@@ -68,11 +68,11 @@ end
 ```
 
 Select the routing statements that can be used to update a record. Select all acceptable answers:
-- [ ] write /records/:id', to: 'records#update'
-- [ ] put /records/:id', to: 'records#update'
-- [ ] patch '/records/:id', to: 'records#update'
-- [ ] post '/records/:id', to: 'records#update'
-- [ ] resource :records, only: [:update]
+- [ ] write '/records/:id', to: 'records#update'
+- [x] put '/records/:id', to: 'records#update'
+- [x] patch '/records/:id', to: 'records#update'
+- [x] post '/records/:id', to: 'records#update'
+- [x] resource :records, only: [:update]
 
 ## Task 5.
 See `app/poros/task_5.rb`
@@ -89,7 +89,7 @@ Extend the application to create `Activities` over multiple steps:
 
 **Step 3**: starts_at, ends_at [back and save buttons]
 
-Update the activity model, controller and views to reflect this functionality. 
+Update the activity model, controller and views to reflect this functionality.
 
 - Every step should have its own form
 - Show `"#{current_step} of 3"`

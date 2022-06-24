@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="notice">
+  <p style="color: green"><%= notice %></p>
+</div>
 
-<h1>Activities</h1>
+<h1 class="title">Activities</h1>
+
+<div class="header">
+  <%= link_to "New activity", new_activity_path, class: 'button new-activity-button' %>
+</div>
 
 <div id="activities">
   <% @activities.each do |activity| %>
     <%= render activity %>
-    <p>
-      <%= link_to "Show this activity", activity %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New activity", new_activity_path %>
